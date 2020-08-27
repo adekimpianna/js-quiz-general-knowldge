@@ -1,155 +1,103 @@
-# JavaScript Quiz
+# Project Development Strategy
 
-This is a simple website in which users can check their JS knowledge by taking a quick quiz.
+##  JavaScript Quiz: Focusing on State
 
----
+### Wireframe
 
-## User Story Dependencies
+![front](images/wireframe_front.jpg)
+![quiz](images/wireframe_quiz.jpg)
+![cheat](images/wireframe_cheat.jpg)
+![back](images/wireframe_back.jpg)
 
-[Story Dependency Diagram](https://excalidraw.com/#json=5248906938023936,dnJz0Qy9tk5M4ho-RUiqYQ)
+  
+## Set-Up
 
----
+__A User can see my initial repository and live demo__
 
-## WIREFRAME
 
-![wireframe](./img/wireframe.jpg)
+### Repo 
 
----
+> On this step the project repo was generated from template [w3-validation-template](https://github.com/HackYourFutureBelgium/state-project-js-quiz)
 
-## 0.Setup
+ Steps:
 
-- Start a repo.
-- Study (and possibly modify) the backlog
-- Design a simple wireframe to set guidelines for UI/UX design.
-- Devise a development strategy.
+- Generate repo from template
+- Turn on GitHub Pages
+- Written initial, basic README
+- Development-strategy file created
+- Created issues per branches
 
----
 
-## 1. Initialize Application
+## 1. User Story: User can see a quiz
 
-__As a user I want to see the home page when I load the site__
+Set up User Interface based on the wireframe so that user can see how the quiz is by clicking the start button
 
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
+Steps:
+- Create a new branch from master branch, named `user-interface`
+- Develop `HTML` for two pages: front/end page and quiz page, link them through start button with href
+- Add `CSS` accordingly 
+- Open PR to the master branch
+ 
 
-### REPO
+## 2. User Story: User can see many questions
 
-- This user story is developed on branch `_`.
-- This branch is merged to `master` branch after completion.
+The user can see many questions and many answers
 
-### Task A
+Steps:
+- Create a new branch from the master branch, named `see-questions`
+- Add a **list of questions** (and answers) on, **variables** and **state** on `data.js`
+- Add a **function** to randomly show the questions and render it to HTML on `view.js` ?
+- Open PR from the branch to the master branch
 
-### Task B
 
-### Task ...
+## 3. User Story: User can choose the answer
 
----
+A user can click on the answer and see the feedback from each answer whether it is true or false by color differentiation
 
-## 2. Begin the Quiz
+Steps:
+- Create a new branch from the master branch, named `choose-answer`
+- Add a **function** for users to select the answer on `handler.js` including:
+    - State and log updates
+    - once clicked: it will give a different color and bring to the next question
+    - if the last question: a warning if it is last question with a prompt and the _quit_ button changes to _see result_
+- Add an **event listener** to _click answer_ on `listener.js`
+- Open PR from the branch to the master branch
 
-__As a user I want to see at least 8 quiz questions__
 
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
+## 4. User Story: User can end the quiz without answering all questions
 
-### REPO
+A user can quit before finishing the quiz
 
-- This user story is developed on the branch `_`
-- This branch is merged to the `master` branch after completion.
+Steps:
+- Create a new branch from the master branch, named `quit-quiz`
+- Add a **function** to let players quit the game on `handler.js` including state and log updates, leading to **end result page**
+- Add an **event listener** for the quit button on `listener.js`
+- Open PR from the branch to the master branch
 
-### Task A
 
-### Task B
+## 5. User Story: User can see the end result
 
-### Task ...
+A user can see how many questions are correcly answered, etc and also can see their answer on the end page
 
+Steps:
+- Create a new branch from the master branch, named `end-result`
+- Add a function to **calculte the score** on `logic.js`
+- Add a function to render **end result** score and details from state on `view.js`
+- Open PR from the branch to the master branch
 
----
 
-## 3. Select an answer
+## 6. Additional User Story: User can cheat
 
-__As a user I want to select my answer for each quiz question__
+A user can click on cheat button to see a clue to answer the question
 
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
+Steps:
+- Create a new branch from the master branch, named `see-cheat`
+- Add a **function** to let players see the clue on `handler.js` including state and log updates
+- Add a function to **render the clue** on `view.js`
+- Open PR from the branch to the master branch
+  
 
-### REPO
+## Finishing Touches
 
-- This user story is developed on the branch `_`
-- This branch is merged to the `master` branch after completion.
-
-### Task A
-
-### Task B
-
-### Task ...
-
----
-
-## 4.a View Score
-
-__As a user I want to see my score__
-
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
-
-### REPO
-
-- This user story is developed on the branch `_`
-- This branch is merged to the `master` branch after completion.
-
-### Task A
-
-### Task B
-
-### Task ...
-
----
-
-## 4.b Get Feedback
-
-__As a user I want to know the correct answers for incorrect questions__
-
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
-
-### REPO
-
-- This user story is developed on the branch `_`
-- This branch is merged to the `master` branch after completion.
-
-### Task A
-
-### Task B
-
-### Task ...
-
-
----
-
-## 5. Cheat
-
-__As a user I want to be able to see the correct answers without taking the quiz__
-
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
-
-### REPO
-
-- This user story is developed on the branch `_`
-- This branch is merged to the `master` branch after completion.
-
-### Task A
-
-### Task B
-
-### Task ...
-
----
-
+- Validate codes to check for any last mistakes
+- All bugs and errors were fixed
