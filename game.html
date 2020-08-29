@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>General Knowlegde Quiz</title>
+
+  <link rel="stylesheet" href="./styles/flex.css">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <!-- load the testing dependencies -->
+  <script src='./lib/chai.js'></script>
+  <script src='./lib/describe-it.js'></script>
+  <script src='./lib/gremlins.js'></script>
+
+  <!-- load the logging dependency -->
+  <script src='./lib/deep-clone.js'></script>
+
+  <!-- load src files -->
+  <script src='./src/data.js'></script>
+  <script src='./src/log.js'></script>
+  <script src='./src/init.js'></script>
+  <script src="./src/handlers/starter.js"></script>
+  <script src="./src/logic/starter.js"></script>
+  <script src="./src/views/starter.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title" class="center-xs center-sm center-md center-lg">General Knowlegde Quiz</h1>
+    
+        <!--QUIZ CONTENT-->
+        <div class="content-container">
+          
+            <!--QUESTION-->
+            <div id="question-container">
+                <h3 id="question">What is the answer of this question?</h3>
+            </div>
+
+            <!--CHEAT TEXT--> 
+            <div id="cheat-container" class="hide">
+                <h4 id="cheat">You can answer anything to this question, all is correct!</h4>
+            </div>
+        
+           <div id="answer-container"> 
+               <!--OPTIONS ROW 1: A, C-->
+                <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                        <div class="answer-wrapper">
+                            <p class="answ-option">A</p>
+                            <p class="answ-text" data-number="1">Option A</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                        <div class="answer-wrapper">
+                            <p class="answ-option">B</p>
+                            <p class="answ-text" data-number="2">Option B</p>
+                        </div>
+                    </div>
+                 </div>
+                 <!--OPTIONS ROW 2: B, D-->
+                 <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                      <div class="answer-wrapper">
+                        <p class="answ-option">C</p>
+                        <p class="answ-text" data-number="3">Option C</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                      <div class="answer-wrapper">
+                        <p class="answ-option">D</p>
+                        <p class="answ-text" data-number="4">Option D</p>
+                      </div>
+                    </div>
+                </div>
+           </div>
+          
+
+          <!--BACK PAGE-->
+           <div id="score-container" class="hide">
+            <div id="score-header" class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <div id="answered" class="space">Answered:</div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <div id="correct" class="space">Correct:</div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <div id="cheat" class="space">Cheat:</div>
+                </div>
+            </div>
+            <div id="score-footer" class="center-xs center-sm center-md center-lg">
+                <h2 id="score" >Score</h2>
+                <h3 id="score-message">Message</h3>
+            </div>
+          </div>
+
+          <!--BUTTONS-->
+          <div id ="button-container" class="row center-xs center-sm center-md center-lg">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                <button id="cheat-btn" class="buttons">Cheat</button>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                <button id="exit-btn" class="buttons">Exit</button>
+            </div>
+          </div>
+    
+        </div>
+    </div>
+
+  <!-- load listeners -->
+<script src="./src/listeners/starter.js"></script>
+
+  <!-- Leave this here, it renders the review buttons
+      write your code above this script tag  -->
+  <script src='./lib/review-buttons.js'></script>
+
+</body>
+
+</html>
+
+
+

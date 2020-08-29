@@ -3,9 +3,10 @@
 
 <head>
   <meta charset='utf8'>
-  <title>your project name</title>
+  <title>General Knowlegde Quiz</title>
 
-  <link href="./style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/flex.css">
+  <link rel="stylesheet" href="./styles/style.css">
 
   <!-- load the testing dependencies -->
   <script src='./lib/chai.js'></script>
@@ -19,17 +20,38 @@
   <script src='./src/data.js'></script>
   <script src='./src/log.js'></script>
   <script src='./src/init.js'></script>
-
-
-
+  <script src="./src/handlers/starter.js"></script>
+  <script src="./src/logic/starter.js"></script>
+  <script src="./src/views/starter.js"></script>
 </head>
 
 <body>
+  <div class="container row center-xs middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <h1 id="title" >General Knowlegde Quiz</h1>
 
-
+    <!--QUIZ CONTENT-->
+    <div class="content-container row center-xs center-sm middle-md middle-lg">
+      
+      <!--FRONT PAGE-->
+      <div id="rules-container" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div>
+          <p>
+            10 Questions To Answer<br>
+            No Time Limit<br>
+            Click Cheat To Help<br>
+            See Your Score At The End
+          </p>
+        </div>
+      </div>
+      <div class="center-xs center-sm center-md center-lg">
+        <button id="play-btn" class="buttons">Play</button>
+      </div>
+      
+    </div>
+  </div>
 
   <!-- load listeners -->
-
+<script src="./src/listeners/starter.js"></script>
 
   <!-- Leave this here, it renders the review buttons
       write your code above this script tag  -->
